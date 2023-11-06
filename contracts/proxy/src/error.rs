@@ -11,5 +11,7 @@ pub enum ContractError {
     #[error("Direct part has to be between 0 and 1")]
     InalidDirectPart,
     #[error("Unauthorized")]
-    Unauthorized
+    Unauthorized,
+    #[error("Unrecognized reply id: {0}")]
+    UnrecognizedReplyId(u64),
 }

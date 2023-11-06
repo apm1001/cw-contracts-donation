@@ -1,13 +1,13 @@
 [package]
-name = "proxy"
+name = "membership"
 version = "0.1.0"
 edition = "2021"
 
-[features]
-library = []
-
 [lib]
 crate-type = ["cdylib", "rlib"]
+
+[features]
+library = []
 
 [dependencies]
 cosmwasm-std = "1.1.9"
@@ -17,3 +17,4 @@ schemars = "0.8.11"
 cosmwasm-schema = "1.1.9"
 thiserror = "1.0.38"
 cw-utils = "1.0.2"
+proxy = { version = "0.1.0", path = "../proxy", features = ["library"] }
